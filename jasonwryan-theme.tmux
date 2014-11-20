@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 main() {
-	# Enable status bar
-	bind-key b set-option status
-	
+	# Wm window title string (uses statusbar variables)
+	tmux set-option -g set-titles-string "tmux:#I [ #W ]"
+
 	tmux set-option -g window-status-format "#I:#W"
 	tmux set-option -g window-status-current-format "#I:#W"
 	
