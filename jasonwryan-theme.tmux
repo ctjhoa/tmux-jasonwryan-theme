@@ -43,7 +43,7 @@ main() {
 		tmux set-option -g status-left-length 40
 
 		tmux set-option -g status-left "#[fg=blue]#H #[fg=black,bright]• #[default]#[fg=green]#(uname -r)#[default]"
-		tmux set-option -g status-right "#[fg=cyan] #(awkuptime) #[fg=black,bright]• #[fg=magenta]#(awk \'{print $1,$2,$3}\' /proc/loadavg)"
+		tmux set-option -g status-right "#[fg=cyan] #(uptime -p) #[fg=black,bright]• #[fg=magenta]#(awk \'{print $1,$2,$3}\' /proc/loadavg)"
 	else
 		# Statusbar if tmux run in console
 		# information normally in dwm bar
@@ -62,7 +62,7 @@ main() {
 		tmux set-option -g message-attr bright
 
 		tmux set-option -g status-left "#[fg=blue] #H #[fg=black]• #[fg=green]#(uname -r) #[fg=black]• #[fg=yellow]#(sensors | awk \'\/MB\/ { print +$3\"°C\" }\')"
-		tmux set-option -g status-right "#[fg=yellow,nobright]Mail: #(tmuxmail.sh)#[fg=black,bright] • #[fg=magenta]#(awk \'{ print $1,$2,$3 }\' /proc/loadavg)#[fg=black] • #[fg=cyan]%I:%M #[default]"
+		tmux set-option -g status-right "#[fg=yellow,nobright] #(uptime)#[fg=black,bright] • #[fg=magenta]#(awk \'{ print $1,$2,$3 }\' /proc/loadavg)#[fg=black] • #[fg=cyan]%I:%M #[default]"
 	fi
 }
 main
