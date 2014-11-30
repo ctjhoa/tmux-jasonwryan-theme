@@ -38,4 +38,4 @@ Reload TMUX environment:
 You should now be able to use the plugin.
 
 ### License
-[MIT](LICENSE.md)
+[MIT](LICENSE)
