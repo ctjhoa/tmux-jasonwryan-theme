@@ -4,7 +4,7 @@ tmux-jasonwryan-theme
 Tmux plugin to get the jason wryan's tmux appearance
 
 ### Requirements
-* Archlinux
+* Archlinux (for uptime)
 * `ctjhoa/tmux-cpu`
 * `tmux-plugins/tmux-battery`
 
@@ -14,7 +14,7 @@ Add plugin to the list of TPM plugins in `.tmux.conf`:
     set -g @tpm_plugins "                  \
       tmux-plugins/tpm                     \
       tmux-plugins/tmux-battery            \
-      ctjhoa/tmux-cpu                      \
+      tmux-plygins/tmux-cpu                \
       ctjhoa/tmux-jasonwryan-theme         \
     "
 ```
